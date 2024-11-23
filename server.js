@@ -48,7 +48,7 @@ app.post('/recipe', async (req, res) => {
       },
       {
         headers: {
-          Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+          Authorization: `Bearer ${process.env.OPENAI_API_KEY.trim()}`,
           'Content-Type': 'application/json',
         },
       }
